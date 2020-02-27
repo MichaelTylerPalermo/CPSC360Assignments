@@ -63,7 +63,7 @@ Book Book::operator=(const Book &right){
 }
 Book Book::operator+(const Book &right){
 	Book temp;
-	temp.Title = Title + right.Title;
+	temp.Title = Title +", "+ right.Title;
 	temp.bookID = rand() %1000 +1;
 	temp.checkedOut = false;
 	return temp;

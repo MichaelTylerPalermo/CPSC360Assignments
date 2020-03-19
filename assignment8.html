@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <p id="demo">Click the button to to begin.</p>              
+        <button onclick="findingEWords()">Try it</button>           
+        <script type="text/javascript">
+        //prompt before the button
+        //button that, once clicked, will run my function "findingEWords"
+            var findingEWords = function(){                         //declaring the function with no parameters
+                var eWords = [];                                    //declaring the array
+                var str = prompt("Enter a string: ");               //prompting user input 
+                str = str.split(" ");                               //splits the string into separate words
+                for(var i =0; i<str.length; i++){                   //iterating through each separate word in the array
+                    alert(str[i]);                                  //confirms each word in the array
+                    var word =str[i];                               //make new variable for each word
+                    for(var j=0;j<word.length;j++){                 //iterating through each letter of individual word
+                        if(word[j]==="e"){                          //if the word has 'e' in it
+                            eWords.push(word);                      //push it to the eWords array
+                            break;                                  //continue onto next iteration
+                            }
+                        }
+                    }
+                var longest = eWords.reduce((a, b) => a.length > b.length ? a : b, '');  //finds the longest e word by reducing each word in the list based on length
+                //display
+                alert("Number of words containing the letter e: " + eWords.length);
+                alert("Longest word that contains the letter e: "+longest);
+                alert("Number of characters in that word: "+longest.length);                
+            }
+            </script>
+    </body>
+</html>

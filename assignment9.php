@@ -1,3 +1,8 @@
+<!-- Write a PHP script that computes the sum of a sequence of numbers beginning with a
+certain value x ending with y. For example, the sum of integers from (3, 5) will be 12. You
+should output your result to look like this:
+The sum of 3 consecutive numbers from 3 to 5 is 12.
+-->
 <html>
 	<head>
 		<title> Assignment 9: PHP Basics </title>
